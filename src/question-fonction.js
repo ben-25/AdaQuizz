@@ -20,26 +20,26 @@ export function check(i, index, value){
     }
 }
 
- export function activerBtn(i, afficherQuestion){
-  document.querySelectorAll('#choix input').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      check(i, quiz.questions[i].correctIndex, btn.value);
-      document.querySelectorAll('#choix input').forEach((b) => {
-        b.disabled = true;
-      });
-      if (next){
-        const next = document.querySelector("#next");
-        next.addEventListener("click", () => {
-          i++;
-          afficherQuestion(i);
-          activerBtn(i, afficherQuestion);
-        })
-      } else if (end){
-        const end = document.querySelector("#end"); //PAGE DE SCORE
-        end.addEventListener("click", () => {
-          console.log("Envoyer vers la page de score")
-        })
-      }
+export function activerBtn(i, afficherQuestion){
+    document.querySelectorAll('#choix input').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            check(i, quiz.questions[i].correctIndex, btn.value);
+            document.querySelectorAll('#choix input').forEach((b) => {
+            b.disabled = true;
+        });
+        if (next){
+            const next = document.querySelector("#next");
+            next.addEventListener("click", () => {
+                i++;
+                afficherQuestion(i);
+                activerBtn(i, afficherQuestion);
+            })
+        } else if (end){
+            const end = document.querySelector("#end"); //PAGE DE SCORE
+            end.addEventListener("click", () => {
+                console.log("Envoyer vers la page de score")
+            })
+        }
+        });
     });
-  });
 }
