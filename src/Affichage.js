@@ -1,16 +1,23 @@
 import { domAccueil } from "./Dom-acceuil";
 import { domFin } from "./Dom-fin";
 import { domQuestion } from "./Dom-question"
+import { resetScore } from "./question-fonction";
 
-export function affichage(){
+export function affichage() {
     domAccueil();
-    document.querySelector("#start").addEventListener("click", () => {
-        domQuestion();
-        document.querySelector("#end").addEventListener("click", () => {
+
+    document.addEventListener("click", (btn) => {
+        if (btn.target.id === "start") {
+            domQuestion();
+        }
+
+        if (btn.target.id === "end") {
             domFin();
-            document.querySelector("#restart").addEventListener("click", () => {
-                affichage();
-            })
-        })
-    })
+        }
+
+        if (btn.target.id === "restart") {
+            resetScore();
+            affichage();
+        }
+    });
 }
