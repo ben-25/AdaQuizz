@@ -1,4 +1,4 @@
-import quiz from "./quizz-femmes-scientifiques.json"
+import quiz from "./quiz-femmes-scientifiques.json"
 import './style.css'
 import { check } from "./question-fonction"
 import { activerBtn } from "./question-fonction"
@@ -25,5 +25,8 @@ function afficherQuestion(i){
   </main>
   `
 }
-afficherQuestion(i);
-activerBtn(i, afficherQuestion, score);
+
+export function domQuestion(){
+  afficherQuestion(i);
+  activerBtn(i, afficherQuestion, score);
+}

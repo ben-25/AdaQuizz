@@ -1,1 +1,3 @@
-import './Dom-question.js'
+import { affichage } from "./Affichage";
+
+affichage();

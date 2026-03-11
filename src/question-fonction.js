@@ -1,4 +1,4 @@
-import quiz from "./quizz-femmes-scientifiques.json"
+import quiz from "./quiz-femmes-scientifiques.json"
 
 export function check(i, index, value, score){
     let nextQuestion;
@@ -40,7 +40,7 @@ export function activerBtn(i, afficherQuestion, score){
             })
         } else if (end){
             end.addEventListener("click", () => {
-                console.log(score);
+                return score;
             })
         }
         });
