@@ -1,2 +1,3 @@
-import "./Dom-acceuil";
-import "./Dom-fin";
+import { affichage } from "./Affichage";
+
+affichage();
