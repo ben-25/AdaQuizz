@@ -4,6 +4,7 @@ import { check } from "./question-fonction"
 import { activerBtn } from "./question-fonction"
 
 let i = 0;
+let score = 0;
 
 function afficherQuestion(i){
   document.querySelector('#app').innerHTML = `
@@ -25,4 +26,4 @@ function afficherQuestion(i){
   `
 }
 afficherQuestion(i);
-activerBtn(i, afficherQuestion);
+activerBtn(i, afficherQuestion, score);
