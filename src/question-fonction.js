@@ -16,12 +16,12 @@ export function check(i, index, value, score){
     if (value == quiz.questions[i].options[index]){
         scoreEnd++;
         document.querySelector('#reponse').innerHTML = `
-        <h2>Bonne reponse</h2>
+        <h2 class="good">Bonne reponse</h2>
         ${nextQuestion}
         `
     } else {
         document.querySelector('#reponse').innerHTML = `
-        <h2>Mauvaise reponse, la bonne réponse est : ${quiz.questions[i].options[index]}</h2>
+        <h2 class="bad">Mauvaise reponse, la bonne réponse est : ${quiz.questions[i].options[index]}</h2>
         ${nextQuestion}
         `
     }

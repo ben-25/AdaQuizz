@@ -13,7 +13,7 @@ function afficherQuestion(i){
   </header>
   <main>
   <div id="question">
-        <h2>${quiz.questions[i].question}</h2>
+        <h2 id="question">${quiz.questions[i].question}</h2>
     </div>
     <div id="choix">
         <input type="button" value="${quiz.questions[i].options[0]}">
