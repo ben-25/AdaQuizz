@@ -16,7 +16,7 @@ function afficherQuestion(i){
         <h2>${quiz.questions[i].question}</h2>
     </div>
     <div id="choix">
-    <input type="button" value="${quiz.questions[i].options[0]}">
+        <input type="button" value="${quiz.questions[i].options[0]}">
         <input type="button" value="${quiz.questions[i].options[1]}">
         <input type="button" value="${quiz.questions[i].options[2]}">
         <input type="button" value="${quiz.questions[i].options[3]}">
