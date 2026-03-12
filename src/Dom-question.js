@@ -1,6 +1,5 @@
 import quiz from "./quiz-femmes-scientifiques.json"
 import './style.css'
-import { check } from "./question-fonction"
 import { activerBtn } from "./question-fonction"
 
 let i = 0;

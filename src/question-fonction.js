@@ -4,10 +4,10 @@ import { updateProgressBar } from "./progress";
 export let scoreEnd = 0;
 
 export function resetScore(){
-    scoreEnd = 0;   
+    scoreEnd = 0;
 }
 
-export function check(i, index, value, score){
+export function check(i, index, value){
     let nextQuestion;
     if (i == quiz.questions.length - 1){
         nextQuestion = `<input type="button" id="end" value="Voir le score">`
@@ -32,7 +32,7 @@ export function check(i, index, value, score){
 export function activerBtn(i, afficherQuestion, score){
     document.querySelectorAll('#choix input').forEach((btn) => {
         btn.addEventListener('click', () => {
-            check(i, quiz.questions[i].correctIndex, btn.value, score);
+            check(i, quiz.questions[i].correctIndex, btn.value);
             document.querySelectorAll('#choix input').forEach((b) => {
             b.disabled = true;
             });

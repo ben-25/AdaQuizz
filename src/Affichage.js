@@ -1,4 +1,4 @@
-import { domAccueil } from "./Dom-acceuil";
+import { domAccueil } from "./Dom-accueil";
 import { domFin } from "./Dom-fin";
 import { domQuestion } from "./Dom-question";
 import { resetScore } from "./question-fonction";
