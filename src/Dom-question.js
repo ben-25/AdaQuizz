@@ -10,6 +10,9 @@ function afficherQuestion(i){
   document.querySelector('#app').innerHTML = `
   <header>
   <h1>${quiz.title}</h1>
+  <div class="progress-container">
+    <div class="progress-barre">0%</div>
+  </div>
   </header>
   <main>
   <div id="question">

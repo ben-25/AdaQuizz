@@ -87,3 +87,22 @@ div#choix{
   background-color:rgb(178, 89, 0);
   color: rgb(255, 182, 109);
 }
+
+.progress-container {
+  width: 100%;
+  background-color: #eee;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 25px;
+  margin-bottom: 20px;
+}
+
+.progress-barre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 0%;
+  background-color: #4caf50;
+  color: white;
+}

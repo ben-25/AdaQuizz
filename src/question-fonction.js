@@ -1,4 +1,5 @@
 import quiz from "./quiz-femmes-scientifiques.json"
+import { updateProgressBar } from "./progress";
 
 export let scoreEnd = 0;
 
@@ -41,6 +42,7 @@ export function activerBtn(i, afficherQuestion, score){
                 next.addEventListener("click", () => {
                     i++;
                     afficherQuestion(i);
+                    updateProgressBar(i, quiz.questions.length)
                     activerBtn(i, afficherQuestion, score);
                 })
             }
